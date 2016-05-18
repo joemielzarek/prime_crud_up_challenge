@@ -2,11 +2,13 @@ var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
 var index = require('./routes/index');
+var owners = require('./routes/owners');
+
 
 app.use(bodyParser.urlencoded({extended: true}));
 //Routes
 
-//app.use('/owners', index);
+app.use('/owners', owners);
 
 //app.use('/pets', index);
 

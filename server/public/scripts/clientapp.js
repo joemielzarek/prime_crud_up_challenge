@@ -8,11 +8,11 @@ $(document).ready(function(){
 
 //------- UTILITY FUNCTIONS -------//
 function postResponse(res) {
-  if (res == 200) {
+  if (res == 'Created') {
     //call function that appends to DOM or seperate GET
     console.log('Owner recieved!');
   } else {
-    console.log('Owner rejected!!');
+    console.log('Owner rejected!!', res);
   }
 }
 
@@ -25,6 +25,7 @@ function postOwner(event) {
   $.each($('#owner-reg-form').serializeArray(), function (i, field) {
     owner[field.name] = field.value;
   });
-
-  $.post('/owners', data, postResponse);
+  
+  $('#owner-reg-form').children().val('');
+  $.post('/owners', owner, postResponse);
 }
