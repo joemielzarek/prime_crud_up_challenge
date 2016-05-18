@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Owners and Pets</title>
+    <link rel="stylesheet" href="../styles/stylesheet.css"/>
+    <script src="../vendor/jquery.min.js"></script>
+    <script src="../scripts/clientapp.js"></script>
+  </head>
+  <body>
+    <h1>Owners and Pets</h1>
+    <form id="owner-reg-form">
+      <h2>Owner Registration</h2>
+      <label for="first-name">First Name:</label>
+      <input type="text" id="first-name" name="first-name" />
+      <label for="last-name">Last Name:</label>
+      <input type="text" id="last-name" name="last-name" />
+      <button id="register-btn">Register</button>
+    </form>
+    <form id="pets-form">
+      <h2>Pets</h2>
+      <label for="owner-name">Owner Name:</label>
+      <select id="owner-drop-down" name="owner">
+        <option value="drop-down-test">Test</option>
+      </select>
+      <label for="pet-name">Pet Name:</label>
+      <input type="text" id="pet-name" name="pet-name" />
+      <label for="pet-breed">Breed:</label>
+      <input type="text" id="pet-breed" name="pet-breed" />
+      <label for="pet-color">Color:</label>
+      <input type="text" id="pet-color" name="pet-color" />
+      <button id="add-pet-btn">Add Pet</button>
+    </form>
+    <table id="data-table-container">
+    </table>
+  </body>
+</html>
